@@ -15,7 +15,7 @@ public class SpringBootEventDemo {
     public static void main(String[] args) {
         new SpringApplicationBuilder(SpringBootEventDemo.class)
         .listeners(applicationEvent -> {
-            System.out.println("监听事件："+applicationEvent.getClass().getSimpleName());
+            System.err.println("监听事件："+applicationEvent.getClass().getSimpleName());
         })
         .run(args);
     }
